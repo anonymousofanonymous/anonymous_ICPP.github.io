@@ -25,7 +25,7 @@
     </div>
     <div class="col-md-10">
       <p>
-   Dear Reviewers:</br>
+   Dear Reviewers,</br>
  Thank you very much for your time and effort in reviewing our submission. Your review comments are very helpful for us to improve the manuscript. Please find our detailed response to your comments in the next pages. We believe this submission has properly addressed your comments.
       </p>
     </div>
@@ -142,7 +142,7 @@ Thank you for the comment. We will revise Figure 15 to include the timing.
 One of the proposed optimizations is storing data in different types of arrays that would fit the data type size. However there are different coalescing patterns depending on the amount of data and cache lines have a fixed amount. I am not convinced that the strategy will yield the expected results. Similarly when using those different data types for operation some casting will be required.
 </i></br></br>
 <b>Response #1:</b> 
-Thank you so much for your comment. Yes, you are correct that different coalescing patterns depend on the number of stimulus. However, our transpliation does not impose any constraint on this and can be easily extended to handle the issue through parameterization. For example, our pipeline scheduling algorithm partitions all stimulus into groups such that all stimulus within a group is simultaneously simulated on a GPU. We can ensure memory access is mostly coalesced by setting the proper group size (e.g., 256 or 1024 stimulus per group).
+Thank you so much for your comment. Yes, you are correct that different coalescing patterns depend on the number of stimulus. However, our transpliation does not impose any constraint on this and can be easily extended to handle different coalescing patterns through parameterization. For example, our pipeline scheduling algorithm partitions all stimulus into groups such that all stimulus within a group is simultaneously simulated on a GPU. We can ensure memory access is mostly coalesced by setting the proper group size (e.g., 256 or 1024 stimulus per group).
 </br></br>
 
 <b>Comment #2:</b> 
