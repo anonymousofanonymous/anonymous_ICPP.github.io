@@ -66,7 +66,7 @@ Thank you so much for the comment. Absolute efficiency can be measured by the la
 </i></br></br>
 
 <b>Response #2:</b> 
-Thank you for the comment. RTLflow is primarily bottlenecked by the CPU-based call to set simulation input, i.e., <code>dut.set_inputs</code> in Listing 1. This is a constraint induced by the industrial convention where testbench drivers are typically written on CPU to read inputs from an external file and to handle control flow. However, as shown in Table 5, our pipeline can largely mitigate this challenge. We will revise Section 2.4.3 and Section 4.5 to highlight our explanations above.
+Thank you for the comment. RTLflow is primarily bottlenecked by the CPU-based call to set simulation input, i.e., <code>dut.set_inputs</code> in Listing 1. This is a constraint induced by the industrial convention where testbench drivers are typically written on CPU to read and set inputs from external files. However, as shown in Table 5, our pipeline can largely mitigate this challenge. We will revise Section 2.4.3 and Section 4.5 to highlight our explanations above.
 </br></br>
 <div class="row align-items-center">
   <div class="col-md-2 col-sm-2 ">
