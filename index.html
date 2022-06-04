@@ -21,13 +21,19 @@
   </h1>
   </div>
   <div class="row align-items-center">
-    <div class="col-md-12">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
       <p>
-   &nbsp;&nbsp; Dear Reviewers:</br>
- &nbsp;&nbsp; Thank you very much for your time and effort in reviewing our submission. Your review comments are very helpful for us to improve the manuscript. Please find our detailed response to your comments in the next pages. We believe this submission has properly addressed your comments.
+   Dear Reviewers:</br>
+ Thank you very much for your time and effort in reviewing our submission. Your review comments are very helpful for us to improve the manuscript. Please find our detailed response to your comments in the next pages. We believe this submission has properly addressed your comments.
       </p>
     </div>
-    <div class="col-md-12">
+  </div>
+  <div class="row align-items-center">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
     <h3>Response to Reviewer #1</h3>
     <p>
     Thank you very much for your comments. We appreciate your time and effort in helping us improve the manuscript! Please see below our response.</br></br>
@@ -40,15 +46,17 @@
 Thank you so much for the comment. Absolute efficiency can be measured by the latency needed to complete batch stimulus. Table 2 and Figure 12 provide some insight: When the number of stimulus is small (e.g., &#60;256), RTLflow does not benefit from much data parallelism and thus CPU-based Verilator is better. However, industrial simulators can easily call many thousands of stimulus where RTLflow (GPU) wins out. The break-even points can be observed in Table 2 for Spinal and NVDLA (256 and 1024 stimulus, respectively). Similar number is also observed in Figure 12 for riscv-mini. We will add the three break-even points in section 4.3 to highlight the absolute efficiency.
 </br></br>
 <div class="row align-items-center">
-  <div class="col-md-3 col-sm-3 ">
-  </div>
-  <div class="col-md-9 col-sm-9 ">
-<p><img class="text-center card-img-top" src="img/bep.png" style="width: 60%;"></p>
-  </div>
   <div class="col-md-4 col-sm-4 ">
   </div>
   <div class="col-md-8 col-sm-8 ">
-<p><img class="text-center card-img-top" src="img/bep2.png" style="width: 40%;"></p>
+<p><img class="text-center " srcset="img/bep.png" style="width: 55%;"></p>
+  </div>
+</div>
+<div class="row align-items-center">
+  <div class="col-md-5 col-sm-5 ">
+  </div>
+  <div class="col-md-7 col-sm-7 ">
+<p><img class="text-center card-img-top" src="img/bep2.png" style="width: 35%;"></p>
   </div>
 </div>
 
@@ -66,15 +74,23 @@ Thank you for the comment. RTLflow is primarily bottlenecked by the CPU-based ca
   <div class="col-md-5 col-sm-5 ">
 <p><img class="text-center card-img-top" src="img/code.png" style="width: 60%;"></p>
   </div>
-  <div class="col-md-4 col-sm-4 ">
-<p><img class="text-center card-img-top" src="img/table5.png" style="width: 80%;"></p>
+  <div class="col-md-5 col-sm-5 ">
+<p><img class="text-center card-img-top" src="img/table5.png" style="width: 65%;"></p>
   </div>
+    <div class="col-md-1">
+    </div>
 </div>
 
     </p>
   </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+  <div class="row align-items-center">
 
-    <div class="col-md-12">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
     <h3>Response to Reviewer #2</h3>
     <p>
     Thank you very much for your comments. We appreciate your time and effort in helping us improve the manuscript! Please see below our response.</br></br>
@@ -84,7 +100,7 @@ Thank you for the comment. RTLflow is primarily bottlenecked by the CPU-based ca
 A6000 is a single precision GPU card, there is no discussion about the specified precision and therefore, just by using a lower precision, the GPU hardware can demonstrate a much more efficient way, there is almost easily ×20 in terms of theoretical peak.
 </i></br></br>
 <b>Response #1:</b> 
-Thank you very much for the comment. Our RTL simulation workload does not involve any floating-point operations. All computations are integers. Unless using TensorCores or packed SIMD operations, which can be our future work, the performance is not affected much by the precision issue. The contributions of this paper are, however, more on exploring multi-stimulus simulation (i.e., weak scaling) using GPU. We will revise the paragraph of Figure 7 to highlight our implementation does not take advantage of any single-precision optimizations.
+Typical RTL simulation workloads do not involve any floating-point operations, i.e., all computations of RTLflow are integers. Unless using TensorCores or packed SIMD operations, which can be our future work, the performance is not affected by the precision issue. We will revise Section 3.1.2 to highlight RLTflow does not leverage single-precision optimizations.
 </br></br>
 
 <b>Comment #2:</b> 
@@ -99,12 +115,24 @@ Thank you so much for your comment. We validated all simulation results in Secti
  Figure 15 shall include the timing.
 </i></br></br>
 <b>Response #3:</b> 
-Thank you for the comment. We will revise Figure 15 to include the timing. <p style="color:red">(TODO: add time scale)</p>
+Thank you for the comment. We will revise Figure 15 to include the timing. 
 </br></br>
+<div class="row align-items-center">
+  <div class="col-md-5 col-sm-5 ">
+  </div>
+  <div class="col-md-5 col-sm-5 ">
+<p><img class="text-center card-img-top" src="img/timeline.png" style="width: 60%;"></p>
+  </div>
+</div>
     </p>
     </div>
-
-    <div class="col-md-12">
+    <div class="col-md-1">
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
     <h3>Response to Reviewer #3</h3>
     <p>
     Thank you very much for your comments. We appreciate your time and effort in helping us improve the manuscript! Please see below our response.</br></br>
@@ -114,7 +142,7 @@ Thank you for the comment. We will revise Figure 15 to include the timing. <p st
 One of the proposed optimizations is storing data in different types of arrays that would fit the data type size. However there are different coalescing patterns depending on the amount of data and cache lines have a fixed amount. I am not convinced that the strategy will yield the expected results. Similarly when using those different data types for operation some casting will be required.
 </i></br></br>
 <b>Response #1:</b> 
-Thank you so much for your comment. Yes, you are correct that different coalescing patterns depend on the number of stimulus. However, our transpliation does not impose any constraint on this and can be easily extended to handle the issue through parameterization. For example, our pipeline scheduling algorithm partitions all stimulus into groups so that all stimulus within a group is simultaneously simulated on a GPU. We can ensure memory access is mostly coalesced by setting the proper group size (e.g., 256 or 1024 stimulus per group). <p style="color:red">Nsight Compute profiling shows RTLFlow achieves >XX% coalesced memory accesses. </p>
+Thank you so much for your comment. Yes, you are correct that different coalescing patterns depend on the number of stimulus. However, our transpliation does not impose any constraint on this and can be easily extended to handle the issue through parameterization. For example, our pipeline scheduling algorithm partitions all stimulus into groups such that all stimulus within a group is simultaneously simulated on a GPU. We can ensure memory access is mostly coalesced by setting the proper group size (e.g., 256 or 1024 stimulus per group).
 </br></br>
 
 <b>Comment #2:</b> 
@@ -147,13 +175,14 @@ Thank you for the comment. We did not observe much performance difference betwee
 While the paper shows graphically in fig 9 the theoretical benefit of CUDA Graphs an actual trace via the NSight System tool would have been more relevant to justify this and show the actual behaviour.
 </i></br></br>
 <b>Response #4:</b> 
-Thank you for the comment. We will replace the graph with actual trace via the Nsight Systems to highlight the performance benefit of CUDA Graph.<p style="color:red"> (TODO: replace graph)</p>
+Thank you for the comment. We will replace the graph with actual trace via the Nsight Systems to highlight the performance benefit of CUDA Graph.
 </br></br>
 
     </p>
     </div>
 
-
-  </div>
+    <div class="col-md-1">
+    </div>
+    </div>
 
 </html>
